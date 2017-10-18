@@ -13,6 +13,9 @@ USER=nobody
 GROUP=nogroup
 
 start() {
+       config_get enable "$NAME" "enable" 0
+       [ $enable = "1" ] || return
+
        echo -n "Starting $DESC: $NAME"
 
        gen_cache
