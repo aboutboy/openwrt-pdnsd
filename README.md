@@ -1,9 +1,3 @@
-Add this line to your feeds.conf.default.
+适用于openwrt的pdnsd
 
-
-`src-git openwrtpdnsd https://github.com/mengskysama/openwrt-pdnsd.git`
-
-And run:
-
-
-`./scripts/feeds update -a && ./scripts/feeds install -a`
+相比原版本，增加开机启动时读取配置，判断enable为0还是为1，为0则不启动。
